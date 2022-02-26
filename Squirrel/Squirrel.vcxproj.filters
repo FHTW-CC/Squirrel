@@ -27,9 +27,15 @@
     <ClInclude Include="src\Squirrel\Entry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Squirrel\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Squirrel\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Squirrel\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,3 @@
+[submodule "Squirrel/third_party/spdlog"]
+	path = Squirrel/third_party/spdlog
+	url = https://github.com/gabime/spdlog

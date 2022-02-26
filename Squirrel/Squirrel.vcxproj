@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Squirrel\Log.h" />
     <ClInclude Include="src\Squirrel.h" />
     <ClInclude Include="src\Squirrel\Application.h" />
     <ClInclude Include="src\Squirrel\Core.h" />
     <ClInclude Include="src\Squirrel\Entry.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Squirrel\Log.cpp" />
     <ClCompile Include="src\Squirrel\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,6 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SQ_PLATFORM_WINDOWS;SQ_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Squirrel\third_party\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +85,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SQ_PLATFORM_WINDOWS;SQ_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Squirrel\third_party\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
