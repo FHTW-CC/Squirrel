@@ -23,6 +23,7 @@ project "Squirrel"
 	}
 
 	includedirs{
+		"%{prj.name}/src",
 		"%{prj.name}/third_party/spdlog/include"
 	}
 

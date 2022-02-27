@@ -10,3 +10,6 @@
 	#error Only Windows support!
 
 #endif // SQ_PLATFORM_WINDOWS
+
+//Represents a Bit Position
+#define BIT_FIELD(x) (1<<x)
