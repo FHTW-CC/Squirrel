@@ -9,6 +9,11 @@ workspace "Squirrel"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Squirrel/third_party/GLFW/include"
+
+include "Squirrel/third_party/GLFW"
+
 project "Squirrel"
 	location "Squirrel"
 	kind "SharedLib"
@@ -27,7 +32,13 @@ project "Squirrel"
 
 	includedirs{
 		"%{prj.name}/src",
-		"%{prj.name}/third_party/spdlog/include"
+		"%{prj.name}/third_party/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
