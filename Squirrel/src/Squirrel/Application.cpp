@@ -1,5 +1,5 @@
 #include "Application.h"
-#include "Events/ApplicationEvent.h"
+#include "Events/MouseEvent.h"
 #include "Log.h"
 
 namespace Squirrel {
@@ -14,14 +14,14 @@ namespace Squirrel {
 
 	void Application::Run() {
 
-		WindowResizeEvent e(800, 600);
-		if (e.IsInCategory(EventCategoryApplication))
+		MouseMovedEvent e(10, 15);
+		if (e.IsInCategory(EventCategoryMouse))
 		{
 			SQ_TRACE(e);
 		}
 		if (e.IsInCategory(EventCategoryInput))
 		{
-			SQ_TRACE(e);
+			SQ_WARN(e);
 		}
 		
 		while (true) {
