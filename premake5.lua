@@ -43,7 +43,7 @@ project "Squirrel"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		--staticruntime "On"
 		systemversion "latest"
 
 		defines{
@@ -57,14 +57,20 @@ project "Squirrel"
 
 	filter "configurations:Debug"
 		defines "SQ_DEBUG"
+		staticruntime "off"
+		runtime "Debug"
 		symbols "On"
 		
 	filter "configurations:Release"
 		defines "SQ_RELEASE"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "SQ_DIST"
+		staticruntime "off"
+		runtime "Release"
 		optimize "On"
 
 

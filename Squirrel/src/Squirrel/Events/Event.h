@@ -1,5 +1,6 @@
 #pragma once
 
+#include "sqpch.h"
 #include "Squirrel/Core.h"
 
 

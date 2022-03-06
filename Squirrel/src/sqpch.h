@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Squirrel/Log.h"
+
 #ifdef SQ_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif

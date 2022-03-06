@@ -1,12 +1,15 @@
 #include "sqpch.h"
 #include "Application.h"
-#include "Events/MouseEvent.h"
 #include "Log.h"
+#include <GLFW/glfw3.h>
+
+
 
 namespace Squirrel {
 
 	Application::Application()
 	{
+		window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -15,18 +18,10 @@ namespace Squirrel {
 
 	void Application::Run() {
 
-		MouseMovedEvent e(10, 15);
-		if (e.IsInCategory(EventCategoryMouse))
-		{
-			SQ_TRACE(e);
-		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			SQ_WARN(e);
-		}
-		
-		while (true) {
-
+		while (running) {
+			glClearColor(1, 0.5f, 0, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			window->OnUpdate();
 		}
 	}
 
