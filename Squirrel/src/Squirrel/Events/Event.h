@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Squirrel/Core.h"
-#include <string>
+
 
 namespace Squirrel {
 

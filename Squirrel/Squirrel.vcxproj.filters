@@ -5,7 +5,7 @@
       <UniqueIdentifier>{3C341828-2801-7333-511A-61DB3D46A8C1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Squirrel\Events">
-      <UniqueIdentifier>{8d978493-1b12-40dc-a365-fd0d5605189b}</UniqueIdentifier>
+      <UniqueIdentifier>{A04439A7-0CD0-A66B-15E1-296081EB026C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -19,13 +19,10 @@
     <ClInclude Include="src\Squirrel\Entry.h">
       <Filter>Squirrel</Filter>
     </ClInclude>
-    <ClInclude Include="src\Squirrel\Log.h">
-      <Filter>Squirrel</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Squirrel\Events\Event.h">
+    <ClInclude Include="src\Squirrel\Events\ApplicationEvent.h">
       <Filter>Squirrel\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Squirrel\Events\ApplicationEvent.h">
+    <ClInclude Include="src\Squirrel\Events\Event.h">
       <Filter>Squirrel\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Squirrel\Events\KeyEvent.h">
@@ -34,6 +31,10 @@
     <ClInclude Include="src\Squirrel\Events\MouseEvent.h">
       <Filter>Squirrel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Squirrel\Log.h">
+      <Filter>Squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Squirrel\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Squirrel\Log.cpp">
       <Filter>Squirrel</Filter>
     </ClCompile>
+    <ClCompile Include="src\sqpch.cpp" />
   </ItemGroup>
 </Project>

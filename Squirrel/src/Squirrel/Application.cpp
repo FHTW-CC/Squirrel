@@ -1,3 +1,4 @@
+#include "sqpch.h"
 #include "Application.h"
 #include "Events/MouseEvent.h"
 #include "Log.h"

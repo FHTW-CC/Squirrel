@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sqpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SQ_PLATFORM_WINDOWS;SQ_BUILD_DLL;SQ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third_party\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -96,7 +97,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sqpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SQ_PLATFORM_WINDOWS;SQ_BUILD_DLL;SQ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third_party\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -120,7 +122,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sqpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SQ_PLATFORM_WINDOWS;SQ_BUILD_DLL;SQ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third_party\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -143,19 +146,23 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Squirrel\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Squirrel\Events\Event.h" />
-    <ClInclude Include="src\Squirrel\Events\KeyEvent.h" />
-    <ClInclude Include="src\Squirrel\Events\MouseEvent.h" />
     <ClInclude Include="src\Squirrel.h" />
     <ClInclude Include="src\Squirrel\Application.h" />
     <ClInclude Include="src\Squirrel\Core.h" />
     <ClInclude Include="src\Squirrel\Entry.h" />
+    <ClInclude Include="src\Squirrel\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Squirrel\Events\Event.h" />
+    <ClInclude Include="src\Squirrel\Events\KeyEvent.h" />
+    <ClInclude Include="src\Squirrel\Events\MouseEvent.h" />
     <ClInclude Include="src\Squirrel\Log.h" />
+    <ClInclude Include="src\sqpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Squirrel\Application.cpp" />
     <ClCompile Include="src\Squirrel\Log.cpp" />
+    <ClCompile Include="src\sqpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

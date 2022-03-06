@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Squirrel {
 
 	class SQUIRREL_API WindowResizeEvent : public Event {
