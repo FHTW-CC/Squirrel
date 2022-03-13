@@ -49,7 +49,7 @@ namespace Squirrel {
 
 	class EventDispatcher {
 		template<typename T>
-		using EventFunction = std::is_function<bool(T&)>;
+		using EventFunction = std::function<bool(T&)>;
 
 	public:
 		EventDispatcher(Event& ev) : event(ev) {}
