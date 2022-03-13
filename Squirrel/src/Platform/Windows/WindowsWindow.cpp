@@ -3,6 +3,7 @@
 #include "Squirrel/Events/ApplicationEvent.h"
 #include "Squirrel/Events/KeyEvent.h"
 #include "Squirrel/Events/MouseEvent.h"
+#include <glad/glad.h>
 
 namespace Squirrel {
 
@@ -43,6 +44,8 @@ namespace Squirrel {
 
 		window = glfwCreateWindow((int)props.Width, (int)props.Height, data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		SQ_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(window, &data);
 		SetVSync(true);
 

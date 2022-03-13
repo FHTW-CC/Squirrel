@@ -1,7 +1,7 @@
 #include "sqpch.h"
 #include "Application.h"
 #include "Log.h"
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 
 

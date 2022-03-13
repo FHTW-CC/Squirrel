@@ -11,8 +11,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Squirrel/third_party/GLFW/include"
+IncludeDir["GLAD"] = "Squirrel/third_party/GLAD/include"
 
 include "Squirrel/third_party/GLFW"
+include "Squirrel/third_party/GLAD"
 
 project "Squirrel"
 	location "Squirrel"
@@ -33,11 +35,13 @@ project "Squirrel"
 	includedirs{
 		"%{prj.name}/src",
 		"%{prj.name}/third_party/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
 	}
 
 	links{
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 
@@ -48,7 +52,8 @@ project "Squirrel"
 
 		defines{
 			"SQ_PLATFORM_WINDOWS",
-			"SQ_BUILD_DLL"
+			"SQ_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands{
