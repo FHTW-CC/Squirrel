@@ -22,6 +22,11 @@ namespace Squirrel {
 		while (running) {
 			glClearColor(1, 0.5f, 0, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : layerStack) {
+				layer->OnUpdate();
+			}
+
 			window->OnUpdate();
 		}
 	}
@@ -30,7 +35,24 @@ namespace Squirrel {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(std::bind(&Application::OnWindowClosed, this, std::placeholders::_1));
-		SQ_CORE_TRACE("{0}", e);
+		//SQ_CORE_TRACE("{0}", e);
+
+		for (auto it = layerStack.end(); it != layerStack.begin();) {
+			(*--it)->OnEvent(e);
+			if (e.isProcessed)
+				break;
+		}
+
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		layerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverlay(Layer* layer)
+	{
+		layerStack.PushOverlay(layer);
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e)

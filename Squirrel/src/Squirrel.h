@@ -2,6 +2,7 @@
 
 //Include this in apllications that use Squirrel
 #include "Squirrel/Application.h"
+#include "Squirrel/Layer.h"
 #include "Squirrel/Log.h"
 
 // ### FIRST ENTRY ### 

@@ -40,6 +40,12 @@
     <ClInclude Include="src\Squirrel\Events\MouseEvent.h">
       <Filter>Squirrel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Squirrel\Layer.h">
+      <Filter>Squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Squirrel\LayerStack.h">
+      <Filter>Squirrel</Filter>
+    </ClInclude>
     <ClInclude Include="src\Squirrel\Log.h">
       <Filter>Squirrel</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Squirrel\Application.cpp">
+      <Filter>Squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Squirrel\Layer.cpp">
+      <Filter>Squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Squirrel\LayerStack.cpp">
       <Filter>Squirrel</Filter>
     </ClCompile>
     <ClCompile Include="src\Squirrel\Log.cpp">

@@ -42,9 +42,9 @@ namespace Squirrel {
 		inline bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
+		bool isProcessed = false;
 
 	protected:
-		bool isProcessed = false;
 	};
 
 	class EventDispatcher {

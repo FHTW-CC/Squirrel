@@ -83,7 +83,8 @@
       <AdditionalIncludeDirectories>src;third_party\spdlog\include;third_party\GLFW\include;third_party\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,7 +109,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -134,7 +136,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,6 +161,8 @@
     <ClInclude Include="src\Squirrel\Events\Event.h" />
     <ClInclude Include="src\Squirrel\Events\KeyEvent.h" />
     <ClInclude Include="src\Squirrel\Events\MouseEvent.h" />
+    <ClInclude Include="src\Squirrel\Layer.h" />
+    <ClInclude Include="src\Squirrel\LayerStack.h" />
     <ClInclude Include="src\Squirrel\Log.h" />
     <ClInclude Include="src\Squirrel\Window.h" />
     <ClInclude Include="src\sqpch.h" />
@@ -165,6 +170,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Squirrel\Application.cpp" />
+    <ClCompile Include="src\Squirrel\Layer.cpp" />
+    <ClCompile Include="src\Squirrel\LayerStack.cpp" />
     <ClCompile Include="src\Squirrel\Log.cpp" />
     <ClCompile Include="src\sqpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
