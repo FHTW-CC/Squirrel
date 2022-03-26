@@ -12,8 +12,8 @@ namespace Squirrel {
 		virtual ~WindowsWindow();
 
 		virtual void OnUpdate() override;
-		inline unsigned int GetWidth() const override { return data.Height; }
-		inline unsigned int GetHeight() const override { return data.Width; }
+		inline unsigned int GetWidth() const override { return data.Width; }
+		inline unsigned int GetHeight() const override { return data.Height; }
 
 		virtual void SetEventCallback(const EventCallbackFunction& callback) override { data.EventCallback = callback; }
 		virtual void SetVSync(bool enabled) override;

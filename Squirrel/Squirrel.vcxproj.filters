@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="Squirrel\Events">
       <UniqueIdentifier>{A04439A7-0CD0-A66B-15E1-296081EB026C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Squirrel\ImGui">
+      <UniqueIdentifier>{66E61D2C-52B4-1132-3B48-825827B5ED96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\Squirrel\Events\MouseEvent.h">
       <Filter>Squirrel\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Squirrel\ImGui\ImGuiLayer.h">
+      <Filter>Squirrel\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Squirrel\Layer.h">
       <Filter>Squirrel</Filter>
     </ClInclude>
@@ -55,11 +67,17 @@
     <ClInclude Include="src\sqpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Squirrel\Application.cpp">
       <Filter>Squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Squirrel\ImGui\ImGuiLayer.cpp">
+      <Filter>Squirrel\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Squirrel\Layer.cpp">
       <Filter>Squirrel</Filter>

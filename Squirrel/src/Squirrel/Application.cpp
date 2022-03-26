@@ -7,8 +7,12 @@
 
 namespace Squirrel {
 
+	Application* Application::instance = nullptr;
+
 	Application::Application()
 	{
+		SQ_CORE_ASSERT(!instance, "Application already exists!");
+		instance = this;
 		window = std::unique_ptr<Window>(Window::Create());
 		window->SetEventCallback(std::bind(&Application::OnEvent,this,std::placeholders::_1));
 	}
@@ -48,11 +52,13 @@ namespace Squirrel {
 	void Application::PushLayer(Layer* layer)
 	{
 		layerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
 		layerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e)

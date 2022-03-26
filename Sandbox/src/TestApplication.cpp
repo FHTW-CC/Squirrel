@@ -24,6 +24,7 @@ class Sandbox :public Squirrel::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer);
+		PushOverlay(new Squirrel::ImGuiLayer);
 	}
 	~Sandbox() {
 	}

@@ -22,11 +22,16 @@ namespace Squirrel{
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
 
+		inline static Application& Get() { return *instance; }
+		inline Window& GetWindow() { return *window; }
+
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 		std::unique_ptr<Window> window;
 		bool running = true;
 		LayerStack layerStack;
+
+		static Application* instance;
 	};
 
 	Application* CreateApplication();
