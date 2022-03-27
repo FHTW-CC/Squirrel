@@ -1,3 +1,5 @@
+// Base event class
+// Use for specific Events
 #pragma once
 
 #include "sqpch.h"
@@ -15,6 +17,8 @@ namespace Squirrel {
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
+	// Each event can belong to multiple Categories
+	// Bits represent categories
 	enum EventCategory {
 		None = 0,
 		EventCategoryApplication =	BIT_FIELD(0),
@@ -24,11 +28,12 @@ namespace Squirrel {
 		EventCategoryMouseButton =	BIT_FIELD(4)
 	};
 
-#define DEFINE_EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-								virtual EventType GetEventType() const override { return GetStaticType(); }\
-								virtual const char* GetName() const override { return #type; }
+	// Boilerplate defines used for convenience in event subclasses
+	#define DEFINE_EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+									virtual EventType GetEventType() const override { return GetStaticType(); }\
+									virtual const char* GetName() const override { return #type; }
 
-#define DEFINE_EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+	#define DEFINE_EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
 	class SQUIRREL_API Event
 	{
@@ -62,7 +67,6 @@ namespace Squirrel {
 			}
 			return false;
 		}
-
 
 	private:
 		Event& event;

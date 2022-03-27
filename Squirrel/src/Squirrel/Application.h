@@ -1,3 +1,6 @@
+// This class represents the Engine Application. 
+// Singleton->Only one should ever exist
+
 #pragma once
 
 #include "Core.h"
@@ -5,7 +8,6 @@
 #include "Squirrel/LayerStack.h"
 #include "Events/Event.h"
 #include "Squirrel/Events/ApplicationEvent.h"
-
 
 namespace Squirrel{
 

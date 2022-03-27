@@ -1,3 +1,5 @@
+//Wrapper around spdlog
+//Use client macros in your application
 #pragma once
 
 #include "Core.h"

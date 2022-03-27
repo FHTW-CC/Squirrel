@@ -1,3 +1,5 @@
+// Base class to use for application layers
+
 #pragma once
 #include "Squirrel/Core.h"
 #include "Squirrel/Events/Event.h"

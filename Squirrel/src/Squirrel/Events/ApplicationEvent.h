@@ -19,7 +19,7 @@ namespace Squirrel {
 		}
 
 		DEFINE_EVENT_CLASS_TYPE(WindowResize)
-			DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	private:
 		unsigned int width, height;
@@ -31,7 +31,7 @@ namespace Squirrel {
 		WindowCloseEvent() {}
 
 		DEFINE_EVENT_CLASS_TYPE(WindowClose)
-			DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	};
 	class SQUIRREL_API AppTickEvent : public Event
@@ -47,7 +47,7 @@ namespace Squirrel {
 		AppUpdateEvent() {}
 
 		DEFINE_EVENT_CLASS_TYPE(AppUpdate)
-			DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
+		DEFINE_EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
 	class SQUIRREL_API AppRenderEvent : public Event

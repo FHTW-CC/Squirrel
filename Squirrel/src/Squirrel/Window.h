@@ -1,3 +1,4 @@
+// Ábstract base class for application windows
 #pragma once
 #include "sqpch.h"
 #include "Squirrel/Core.h"

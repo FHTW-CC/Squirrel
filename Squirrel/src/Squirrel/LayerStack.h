@@ -1,3 +1,4 @@
+// Wrapper arround container holding the application layers
 #pragma once
 
 #include "Squirrel/Core.h"

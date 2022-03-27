@@ -1,3 +1,8 @@
+// The main entry-point of any Squirrel application
+// To use Squirrel create a class inheriting from Squirrel::Application
+// Implement the Application::CreateApplication() function to return a new instance of your application subclass.
+// TestApplication.cpp in the Sandbox Project for reference
+
 #pragma once
 
 #ifdef SQ_PLATFORM_WINDOWS

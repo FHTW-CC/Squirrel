@@ -1,3 +1,4 @@
+// Implementation for window on the windows platform
 #pragma once
 #include "Squirrel/Window.h"
 
